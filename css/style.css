@@ -90,18 +90,6 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
-  /*
-  .masthead-brand {
-    float: left;
-  }
-  
-  .masthead-nav {
-    float: right;
-  }
-  */
-}
-
 
 /*
  * Cover
@@ -115,8 +103,8 @@ body {
   font-weight: bold;
 }
 
-.profile img {
-  max-height: 25%;
+#profile {
+  max-height: 500px;
   margin: auto;
 }
 
@@ -135,6 +123,7 @@ body {
  */
 
 @media (min-width: 768px) {
+  
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
@@ -145,4 +134,5 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+  
 }
