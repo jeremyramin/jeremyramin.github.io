@@ -64,6 +64,7 @@ body {
 
 .header-nav {
   display: inline-block;
+  margin: 0px 10px;
 }
 
 .header-nav > li {
