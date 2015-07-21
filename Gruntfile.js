@@ -296,8 +296,8 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'https://github.com/jeremyramin/generator-jekyllrb-test.git',
-          branch: 'gh-pages',
+          remote: 'https://github.com/jeremyramin/jeremyramin.github.io.git',
+          branch: 'master',
           commit: true,
           push: true
         }
