@@ -1,53 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+  {% include head.html %}
 
-        <!-- build:css({app,.tmp}) /css/main.css -->
-        <!-- Syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  <body>
+    {% include nav.html %}
+    
+    <main>
+      {{ content }}
+    </main>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-        <!-- materialize -->
-        <link rel="stylesheet" href="/_bower_components/materialize/dist/css/materialize.min.css">
-        <!-- endbuild -->
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Jeremy Ebneyamin<br />
-                <a href="mailto:ebneyaminj@gmail.com">ebneyaminj@gmail.com</a>
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-    <!-- build:js(app) /js/scripts.js -->
-    <script src="/js/main.js"></script>
-    <script src="_bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="_bower_components/materialize.min.js"></script>
-    <!-- endbuild -->
+    {% include footer.html %}
     </body>
 </html>

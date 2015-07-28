@@ -3,10 +3,11 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: Jeremy Ebneyamin Porfolio
+name: Jeremy Ebneyamin
 description:
 author:
   name: Jeremy Ebneyamin
+production_url : http://username.github.io
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -34,4 +35,4 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: true
-permalink: none
+permalink: /:categories/:year/:title.html

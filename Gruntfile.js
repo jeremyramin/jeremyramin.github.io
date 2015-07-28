@@ -51,9 +51,9 @@ module.exports = function (grunt) {
         options: {
           server: {
             baseDir: [
-              ".jekyll",
-              ".tmp",
-              "<%= yeoman.app %>"
+              '.jekyll',
+              '.tmp',
+              '<%= yeoman.app %>'
             ]
           },
           watchTask: true
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           server: {
-            baseDir: "<%= yeoman.dist %>"
+            baseDir: '<%= yeoman.dist %>'
           }
         }
       },
@@ -79,9 +79,9 @@ module.exports = function (grunt) {
         options: {
           server: {
             baseDir: [
-              ".jekyll",
-              ".tmp",
-              "<%= yeoman.app %>"
+              '.jekyll',
+              '.tmp',
+              '<%= yeoman.app %>'
             ]
           },
           watchTask: true
@@ -187,7 +187,8 @@ module.exports = function (grunt) {
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
-          removeRedundantAttributes: true
+          removeRedundantAttributes: true,
+          removeComments:true
         },
         files: [{
           expand: true,
@@ -250,20 +251,8 @@ module.exports = function (grunt) {
             //'_bower_components/jquery/dist/jquery.min.js',
             //'_bower_components/materialize/dist/**/*',
             'favicon.ico',
-            'apple-touch*.png'
+            '**.png'
           ],
-          dest: '<%= yeoman.dist %>'
-        }, { //for materialize fonts
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>/_bower_components/materialize/dist',
-          src: ['fonts/**/*'],
-          dest: '<%= yeoman.dist %>'
-        }, { //for font-awesome
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>/_bower_components/font-awesome',
-          src: ['fonts/**/*'],
           dest: '<%= yeoman.dist %>'
         }]
       },
