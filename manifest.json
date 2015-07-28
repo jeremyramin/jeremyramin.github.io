@@ -1,5 +1,5 @@
 {
-	"name": "My app",
+	"name": "Jeremy Ebneyamin",
 	"icons": [
 		{
 			"src": "\/android-chrome-36x36.png",
@@ -37,5 +37,7 @@
 			"type": "image\/png",
 			"density": "4.0"
 		}
-	]
+	],
+	"display": "standalone",
+	"orientation": "portrait"
 }
