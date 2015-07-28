@@ -13,7 +13,7 @@ main {
   cursor: pointer;
 }
 
-nav li a img {
+#top-nav img {
   width: 32px;
   vertical-align: middle;
 }
@@ -28,6 +28,20 @@ ul.side-nav {
 
 ul.side-nav li a i {
   float: left;
+}
+
+#external-links {
+  list-style: none;
+  line-height: normal;
+  width: 200px;
+  clear: both;
+  overflow: auto;
+}
+
+#external-links li {
+  clear: none;
+  float: left;
+  width: 33.33%;
 }
 
 #personal-info {
