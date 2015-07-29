@@ -185,6 +185,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           collapseWhitespace: true,
+          conservativeCollapse: false,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
           removeRedundantAttributes: true,
@@ -218,7 +219,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: '**/*.{jpg,jpeg,png}',
+          src: 'img/*.{jpg,jpeg,png}',
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -376,10 +377,9 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
-    'cssmin',
     'autoprefixer:dist',
+    'cssmin',
     'uglify',
-    'imagemin',
     'svgmin',
     'filerev',
     'usemin',
