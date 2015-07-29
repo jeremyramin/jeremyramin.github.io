@@ -5,20 +5,13 @@ layout: default
   <h1 id="header" class="center blue-grey-text text-lighten-1">Contact Me</h1>
   <h6 class="center red-text">* Indicates required field</h6>
   <div class="row">
-    <script type="text/javascript">
-      var submitted=false
-      var replaceForm = function() {
-        $("#form-content").fadeOut("slow", function() {
-          $("#thank-you").fadeIn("slow");
-        });
-      }
-    </script>
+    <script type="text/javascript">var submitted=false;var replaceForm = function() {$("#form-content").fadeOut("slow", function() {$("#thank-you").fadeIn("slow");});}</script>
     <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){$(document).ready(replaceForm());}" style="display: none;"></iframe>
     <form action="https://docs.google.com/forms/d/1SBuyj09G2FBVWZIqgWYuIvodGX8ylUi6UCdWzWH-V_Q/formResponse" onsubmit="submitted=true;" target="hidden_iframe" method="POST" id="ss-form" class="col s12">
       <div class="row">
         <div class="input-field col s12">
           <i class="fa prefix">&#xf007;</i>
-          <input type="text" name="entry.1449535237" id="entry_1449535237" required="">
+          <!-- htmlmin:ignore --><input type="text" name="entry.1449535237" id="entry_1449535237" required="" class=""><!-- htmlmin:ignore -->
           <label for="entry_1449535237">* Full Name</label>
         </div>
       </div>
@@ -32,8 +25,8 @@ layout: default
       <div class="row">
         <div class="input-field col s12">
           <i class="fa prefix">&#xf0ac;</i>
-          <input type="text" name="entry.232074205" id="entry.232074205">
-          <label for="entry.232074205">Website</label>
+          <input type="url" name="entry.232074205" id="entry_232074205">
+          <label for="entry_232074205">Website</label>
         </div>
       </div>
       <div class="row">
