@@ -185,10 +185,10 @@ module.exports = function (grunt) {
       dist: {
         options: {
           collapseWhitespace: true,
-          conservativeCollapse: false,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
+          removeRedundantAttributes: false,
+          removeEmptyAttributes: true,
           removeComments:true
         },
         files: [{
@@ -255,6 +255,7 @@ module.exports = function (grunt) {
             '**.png'
           ],
           dest: '<%= yeoman.dist %>'
+
         }]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
@@ -265,6 +266,16 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/css',
           src: '**/*.css',
           dest: '.tmp/css'
+        }]
+      },
+      // Copy Webshim shims into js folder
+      shims: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/_bower_components/webshim/js-webshim/minified/',
+          src: 'shims/**/*',
+          dest: '<%= yeoman.dist %>/js'
         }]
       }
     },
@@ -301,6 +312,7 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= yeoman.app %>/js/**/*.js',
+        '!<%= yeoman.app %>/js/shims/**/*.js',
         'test/spec/**/*.js'
       ]
     },
@@ -384,7 +396,8 @@ module.exports = function (grunt) {
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:shims'
     ]);
 
   grunt.registerTask('deploy', [
