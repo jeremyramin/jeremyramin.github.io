@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div id="form-content" class="container">
+  <h1 id="header" class="center blue-grey-text text-lighten-1">Contact Me</h1>
+  <h6 class="center red-text">* Indicates required field</h6>
+  <div class="row">
+    <script type="text/javascript">
+      var submitted=false
+      var replaceForm = function() {
+        $("#form-content").fadeOut("slow", function() {
+          $("#thank-you").fadeIn("slow");
+        });
+      }
+    </script>
+    <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){$(document).ready(replaceForm());}" style="display: none;"></iframe>
+    <form action="https://docs.google.com/forms/d/1SBuyj09G2FBVWZIqgWYuIvodGX8ylUi6UCdWzWH-V_Q/formResponse" onsubmit="submitted=true;" target="hidden_iframe" method="POST" id="ss-form" class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fa prefix">&#xf007;</i>
+          <input type="text" name="entry.1449535237" id="entry_1449535237" required="">
+          <label for="entry_1449535237">* Full Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fa prefix">&#xf0e0;</i>
+          <input type="email" name="entry.1428280463" id="entry_1428280463" required="" class="validate" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+          <label for="entry_1428280463" data-error="Invalid" data-success="Valid">* Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fa prefix">&#xf0ac;</i>
+          <input type="text" name="entry.232074205" id="entry.232074205">
+          <label for="entry.232074205">Website</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fa prefix">&#xf040;</i>
+          <textarea name="entry.1284687120" id="entry_1284687120" required="" class="materialize-textarea"></textarea>
+          <label for="entry_1284687120">* Message</label>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="input-field col s12">
+          <button class="btn-large waves-effect waves-light larger-text" type="submit" name="action">Submit<i class="fa right">&#xf1d8;</i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="thank-you" class="container" style="display: none;">
+  <h1 class="center green-text">Submitted Successfully</h1>
+  <h1 class="center green-text">Thank You</h1>
+  <div class='row center'><a href='/index.html' class='btn green'>Return Home</a></div>
+</div>

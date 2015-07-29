@@ -58,3 +58,21 @@ ul.side-nav li a i {
 li.profile:hover {
   cursor: default;
 }
+
+footer a {
+  color: white;
+  display: block;
+}
+
+footer a:not(:first-child) {
+  margin-top: 5px;
+}
+
+footer a:hover {
+  color: rgba(255, 255, 255, .85);
+}
+
+.larger-text {
+  font-size: 1.5rem;
+  font-size: 1.5em;
+}
