@@ -219,7 +219,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: 'img/*.{jpg,jpeg,png}',
+          src: '**/*.{jpg,jpeg,png}',
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -380,6 +380,7 @@ module.exports = function (grunt) {
     'autoprefixer:dist',
     'cssmin',
     'uglify',
+    'imagemin',
     'svgmin',
     'filerev',
     'usemin',
