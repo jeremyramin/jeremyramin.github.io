@@ -6,9 +6,9 @@ $(document).ready(function () {
   var active_links = $('li>a[href="' + path + '"]');
   active_links.addClass('active');
   active_links.parent().addClass('active');
-  
+
   // Open active accordion
   $('.button-collapse').one('click', function() {
     active_links.closest('.collapsible-body').prev().trigger('click.collapse');
-  })
-})
+  });
+});
