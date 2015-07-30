@@ -2,5 +2,9 @@
   "name": "generator-jekyllrb",
   "version": "0.0.0",
   "dependencies": {
+    "fontawesome": "~4.4.0"
+  },
+  "resolutions": {
+    "fontawesome": "~4.4.0"
   }
 }

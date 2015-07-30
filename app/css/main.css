@@ -8,34 +8,25 @@ main {
   flex: 1 0 auto;
 }
 
+.bold > a {
+  font-weight: bold;
+}
+
 /* Navigation */
 .button-collapse {
   cursor: pointer;
 }
 
-#top-nav img {
-  width: 32px;
-  vertical-align: middle;
-}
-
-ul.side-nav {
-  overflow: hidden;
-}
-
-.bold > a {
-  font-weight: bold;
-}
-
-ul.side-nav li a i {
-  float: left;
-}
-
-#external-links {
+.dropdown-content {
   list-style: none;
   line-height: normal;
   width: 200px;
   clear: both;
-  overflow: auto;
+  text-align: center;
+}
+
+ul.dropdown-content li a, .collapsible-body li a {
+  color: #00bcd4;
 }
 
 #external-links li {
@@ -44,15 +35,46 @@ ul.side-nav li a i {
   width: 33.33%;
 }
 
-#personal-info {
-  width: 200px;
-  text-align: center;
-}
-
 #personal-info img {
   width: 180px;
   margin: 10px;
   border: 1px solid black;
+}
+
+img.circle.profile {
+  width: 32px;
+  vertical-align: middle;
+}
+
+.dropdown-content li.active, .dropdown-content a.active, .collapsible-body li.active, .collapsible-body a.active {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+ul.side-nav {
+  overflow: hidden;
+}
+
+ul.side-nav li {
+  line-height: 50px;
+}
+
+ul.side-nav li a {
+  line-height: 50px;
+  height: 50px;
+}
+
+ul.side-nav ul.collapsible-accordion {
+  background-color: #FFF;
+}
+
+.collapsible-body li a i {
+  display: block;
+  float: left;
+  margin-right: 0.3em;
+  line-height: 50px;
+  height: 50px;
+  vertical-align: bottom;
 }
 
 li.profile:hover {
@@ -73,6 +95,5 @@ footer a:hover {
 }
 
 .larger-text {
-  font-size: 1.5rem;
-  font-size: 1.5em;
+  font-size: 150%;
 }

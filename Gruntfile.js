@@ -256,6 +256,12 @@ module.exports = function (grunt) {
           ],
           dest: '<%= yeoman.dist %>'
 
+        },{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/_bower_components/fontawesome/',
+          src: 'fonts/**/*',
+          dest: '<%= yeoman.dist %>'
         }]
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
