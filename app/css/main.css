@@ -1,3 +1,5 @@
+html, body { font-size: 16px; }
+
 body {
     display: flex;
     min-height: 100vh;
@@ -80,17 +82,18 @@ li.profile:hover {
   cursor: default;
 }
 
-footer a {
-  color: white;
+.page-footer li {
+  color: #fff;
   display: block;
+  margin-bottom: 5px;
 }
 
-footer a:not(:first-child) {
-  margin-top: 5px;
+.page-footer a {
+  color: inherit;
 }
 
-footer a:hover {
-  color: #eee;
+.page-footer a:hover {
+  color: #ddd;
 }
 
 .larger-text {
